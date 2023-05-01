@@ -16,7 +16,7 @@
     <projectSourceUrl>https://github.com/localsend/localsend/tree/v1.8.0</projectSourceUrl>
     <mailingListUrl>https://github.com/localsend/localsend/discussions</mailingListUrl>
     <bugTrackerUrl>https://github.com/localsend/localsend/issues</bugTrackerUrl>
-    <tags>localsend message file transfer 64-bit portable cross-platform foss</tags>
+    <tags>localsend message file transfer 64-bit cross-platform foss</tags>
     <summary>An open source cross-platform alternative to AirDrop</summary>
     <description><![CDATA[
 ---
