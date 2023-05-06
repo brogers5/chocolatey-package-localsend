@@ -3,6 +3,17 @@
 [![Chocolatey package version](https://img.shields.io/chocolatey/v/localsend.svg)](https://community.chocolatey.org/packages/localsend)
 [![Chocolatey package download count](https://img.shields.io/chocolatey/dt/localsend.svg)](https://community.chocolatey.org/packages/localsend)
 
+---
+
+This package is part of a family of packages published for LocalSend. This repository is for the meta package.
+
+* For the installer package, see [chocolatey-package-localsend.install](https://github.com/brogers5/chocolatey-package-localsend.install).
+* For the portable package, see [chocolatey-package-localsend.portable](https://github.com/brogers5/chocolatey-package-localsend.portable).
+
+See the [Chocolatey FAQs](https://docs.chocolatey.org/en-us/faqs) for more information on [meta packages](https://docs.chocolatey.org/en-us/faqs#what-is-the-difference-between-packages-no-suffix-as-compared-to.install.portable) and [installer/portable packages](https://docs.chocolatey.org/en-us/faqs#what-distinction-does-chocolatey-make-between-an-installable-and-a-portable-application).
+
+---
+
 ## Install
 
 [Install Chocolatey](https://chocolatey.org/install), and run the following command to install the latest approved stable version from the Chocolatey Community Repository:
@@ -19,9 +30,11 @@ choco install localsend --source="'.;https://community.chocolatey.org/api/v2/'"
 
 ## Build
 
-[Install Chocolatey](https://chocolatey.org/install), the [Chocolatey Automatic Package Updater Module](https://github.com/majkinetor/au), and the [PowerShellForGitHub PowerShell Module](https://github.com/microsoft/PowerShellForGitHub), then clone this repository.
+[Install Chocolatey](https://chocolatey.org/install), clone this repository, and run the following command in the cloned repository:
 
-Once cloned, simply run `build.ps1`. The ZIP archive is intentionally untracked to avoid bloating the repository, so the script will download the LocalSend portable ZIP archive from the official distribution point, then packs everything together.
+```shell
+choco pack
+```
 
 A successful build will create `localsend.x.y.z.nupkg`, where `x.y.z` should be the Nuspec's `version` value at build time.
 

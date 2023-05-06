@@ -36,34 +36,11 @@ LocalSend uses a secure communication protocol that allows devices to communicat
 For more information on the LocalSend Protocol, see the [documentation](https://github.com/localsend/protocol).
 
 ![LocalSend Screenshot](https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-localsend@6414b40023c2c8fa002621c682a5dc6dd92e3f14/Screenshot.png)
-
-## Package Parameters
-
-* `/NoShim` - Opt out of creating a GUI shim.
-* `/NoDesktopShortcut` - Opt out of creating a Desktop shortcut.
-* `/NoProgramsShortcut` - Opt out of creating a Programs shortcut in your Start Menu.
-* `/Start` - Automatically start LocalSend after installation completes.
-
-## Package Notes
-
-For future upgrade operations, consider opting into Chocolatey's `useRememberedArgumentsForUpgrades` feature to avoid having to pass the same arguments with each upgrade:
-
-```shell
-choco feature enable --name="'useRememberedArgumentsForUpgrades'"
-```
 ]]></description>
     <releaseNotes>https://github.com/localsend/localsend/releases/tag/v1.8.0</releaseNotes>
     <dependencies>
-      <dependency id="chocolatey-os-dependency.extension" version="0.0.1" />
-      <dependency id="vcredist140" version="14.20.27508.1" />
+      <dependency id="localsend.portable" version="[1.8.0]" />
     </dependencies>
   </metadata>
-  <files>
-    <file src="tools\chocolateybeforemodify.ps1" target="tools" />
-    <file src="tools\chocolateyinstall.ps1" target="tools" />
-    <file src="tools\chocolateyuninstall.ps1" target="tools" />
-    <file src="tools\LocalSend-*-windows.zip" target="tools" />
-    <file src="tools\LICENSE.txt" target="tools" />
-    <file src="tools\VERIFICATION.txt" target="tools" />
-  </files>
+  <files />
 </package>

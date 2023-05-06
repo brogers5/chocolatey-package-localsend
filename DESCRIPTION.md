@@ -16,18 +16,3 @@ LocalSend uses a secure communication protocol that allows devices to communicat
 For more information on the LocalSend Protocol, see the [documentation](https://github.com/localsend/protocol).
 
 ![LocalSend Screenshot](https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-localsend@6414b40023c2c8fa002621c682a5dc6dd92e3f14/Screenshot.png)
-
-## Package Parameters
-
-* `/NoShim` - Opt out of creating a GUI shim.
-* `/NoDesktopShortcut` - Opt out of creating a Desktop shortcut.
-* `/NoProgramsShortcut` - Opt out of creating a Programs shortcut in your Start Menu.
-* `/Start` - Automatically start LocalSend after installation completes.
-
-## Package Notes
-
-For future upgrade operations, consider opting into Chocolatey's `useRememberedArgumentsForUpgrades` feature to avoid having to pass the same arguments with each upgrade:
-
-```shell
-choco feature enable --name="'useRememberedArgumentsForUpgrades'"
-```
