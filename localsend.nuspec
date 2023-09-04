@@ -3,17 +3,17 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>localsend</id>
-    <version>1.11.0</version>
-    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-localsend/tree/v1.11.0</packageSourceUrl>
+    <version>1.11.1</version>
+    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-localsend/tree/v1.11.1</packageSourceUrl>
     <owners>sublym0nal</owners>
     <title>LocalSend</title>
     <authors>Tien Do Nam</authors>
     <projectUrl>https://localsend.org/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-localsend@6414b40023c2c8fa002621c682a5dc6dd92e3f14/localsend.png</iconUrl>
     <copyright>Copyright (c) 2022-2023 Tien Do Nam</copyright>
-    <licenseUrl>https://github.com/localsend/localsend/blob/v1.11.0/LICENSE</licenseUrl>
+    <licenseUrl>https://github.com/localsend/localsend/blob/v1.11.1/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <projectSourceUrl>https://github.com/localsend/localsend/tree/v1.11.0</projectSourceUrl>
+    <projectSourceUrl>https://github.com/localsend/localsend/tree/v1.11.1</projectSourceUrl>
     <mailingListUrl>https://github.com/localsend/localsend/discussions</mailingListUrl>
     <bugTrackerUrl>https://github.com/localsend/localsend/issues</bugTrackerUrl>
     <tags>localsend message file transfer 64-bit cross-platform foss</tags>
@@ -37,9 +37,9 @@ For more information on the LocalSend Protocol, see the [documentation](https://
 
 ![LocalSend Screenshot](https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-localsend@6414b40023c2c8fa002621c682a5dc6dd92e3f14/Screenshot.png)
 ]]></description>
-    <releaseNotes>https://github.com/localsend/localsend/releases/tag/v1.11.0</releaseNotes>
+    <releaseNotes>https://github.com/localsend/localsend/releases/tag/v1.11.1</releaseNotes>
     <dependencies>
-      <dependency id="localsend.portable" version="[1.11.0]" />
+      <dependency id="localsend.portable" version="[1.11.1]" />
     </dependencies>
   </metadata>
   <files />
