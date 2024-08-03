@@ -1,3 +1,5 @@
+[CmdletBinding()]
+param([switch] $Force)
 Import-Module au
 Import-Module PowerShellForGitHub
 
@@ -31,4 +33,4 @@ function global:au_SearchReplace {
     }
 }
 
-Update-Package -ChecksumFor None -NoReadme
+Update-Package -ChecksumFor None -Force:$Force -NoReadme
