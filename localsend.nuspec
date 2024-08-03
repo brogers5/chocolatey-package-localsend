@@ -3,8 +3,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>localsend</id>
-    <version>1.15.3</version>
-    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-localsend/tree/v1.15.3</packageSourceUrl>
+    <version>1.15.3.20240803</version>
+    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-localsend/tree/v1.15.3.20240803</packageSourceUrl>
     <owners>sublym0nal</owners>
     <title>LocalSend</title>
     <authors>Tien Do Nam</authors>
@@ -30,7 +30,7 @@ For more information on the LocalSend Protocol, see the [documentation](https://
 ]]></description>
     <releaseNotes>https://github.com/localsend/localsend/releases/tag/v1.15.3</releaseNotes>
     <dependencies>
-      <dependency id="localsend.portable" version="[1.15.3]" />
+      <dependency id="localsend.portable" version="[1.15.3.20240803, 1.15.4)" />
     </dependencies>
   </metadata>
   <files />
