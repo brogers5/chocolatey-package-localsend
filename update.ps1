@@ -21,6 +21,9 @@ function global:au_BeforeUpdate ($Package) {
 }
 
 function global:au_SearchReplace {
+    $parsedVersion = [version] $Latest.SoftwareVersion
+    $nextBuildVersion = [version]::new($parsedVersion.Major, $parsedVersion.Minor, $parsedVersion.Build + 1)
+
     @{
         "$($Latest.PackageName).nuspec" = @{
             '(<packageSourceUrl>)[^<]*(</packageSourceUrl>)'                             = "`$1https://github.com/brogers5/chocolatey-package-$($Latest.PackageName)/tree/v$($Latest.Version)`$2"
@@ -28,7 +31,7 @@ function global:au_SearchReplace {
             '(<projectSourceUrl>)[^<]*(</projectSourceUrl>)'                             = "`$1https://github.com/$owner/$repository/tree/v$($Latest.SoftwareVersion)`$2"
             '(<releaseNotes>)[^<]*(</releaseNotes>)'                                     = "`$1https://github.com/$owner/$repository/releases/tag/v$($Latest.SoftwareVersion)`$2"
             '(<copyright>)[^<]*(</copyright>)'                                           = "`$1Copyright (c) 2022-$(Get-Date -Format yyyy) Tien Do Nam`$2"
-            "(\<dependency .+?`"$($Latest.PackageName).portable`" version=)`"([^`"]+)`"" = "`$1`"[$($Latest.Version)]`""
+            "(\<dependency .+?`"$($Latest.PackageName).portable`" version=)`"([^`"]+)`"" = "`$1`"[$($Latest.SoftwareVersion), $nextBuildVersion)`""
         }
     }
 }
