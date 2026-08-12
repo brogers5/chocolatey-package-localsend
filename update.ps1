@@ -7,13 +7,28 @@ $owner = 'localsend'
 $repository = 'localsend'
 
 function global:au_GetLatest {
-    $latestRelease = (Get-GitHubRelease -OwnerName $owner -RepositoryName $repository -Latest)[0]
-    $version = $latestRelease.tag_name.Substring(1)
-
-    return @{
-        SoftwareVersion = $version
-        Version         = $version #This may change if building a package fix version
+    # Get multiple recent releases to find one with the required underlying asset
+    $releases = Get-GitHubRelease -OwnerName $owner -RepositoryName $repository
+    
+    foreach ($release in $releases) {
+        $version = $release.tag_name.Substring(1)
+        $expectedAssetFileName = "LocalSend-$version-windows-x86-64.zip"
+        
+        # Check if the required asset exists in this release
+        $asset = $release.assets | Where-Object { $_.name -eq $expectedAssetFileName }
+        
+        if ($asset) {
+            return @{
+                SoftwareVersion = $version
+                Version         = $version #This may change if building a package fix version
+            }
+        }
+        else {
+            Write-Warning "Skipping over LocalSend release v$version, as it does not contain the required asset: $expectedAssetFileName"
+        }
     }
+    
+    throw 'No release was found with the required asset (LocalSend-*-windows-x86-64.zip)!'
 }
 
 function global:au_BeforeUpdate ($Package) {
